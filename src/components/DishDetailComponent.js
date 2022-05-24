@@ -8,6 +8,7 @@ class DishDetail extends Component{
     }
 
     RenderDish() {
+      
         return (
             <Card>
                 <CardImg width="100%" src={this.props.dish.image} alt={this.props.dish.name}/>
@@ -47,8 +48,10 @@ class DishDetail extends Component{
       }
 
     render() {
+      console.log(this.props.dis);
           return (
-            <div className='row'>
+           <div className="container">
+              <div className='row'>
                 <div className="col-xs-ms-12 col-md-5 m-1">
                     {this.RenderDish()}
                 </div>
@@ -58,6 +61,7 @@ class DishDetail extends Component{
                     </Card>
                 </div>
             </div>
+           </div>
           );
     }
 }
