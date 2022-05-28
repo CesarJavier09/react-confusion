@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem} from 'reactstrap';
+import {Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem} from 'reactstrap';
 import { Link } from 'react-router-dom';
     
 
@@ -17,6 +17,8 @@ import { Link } from 'react-router-dom';
     }
 
     function RenderComments({comments}) {
+      console.log("Dentro de RenderComments");
+      console.log(comments);
       if (comments != null) {
         return(
           <div className="col-12 col-md-5 m-1">
@@ -52,15 +54,11 @@ import { Link } from 'react-router-dom';
 
     const DishDetail = (props) => {
       console.log("DishDetail component Render is invoked");
-      console.log(props.dish);
       if(props.dish != null){
         return (
           <div className="container">
             <div className="row">
                     <Breadcrumb>
-                        <BreadcrumbItem>
-                            <Link to = '/Home'>home</Link>
-                        </BreadcrumbItem>
                         <BreadcrumbItem>
                             <Link to = '/Menu'>menu</Link>
                         </BreadcrumbItem>
